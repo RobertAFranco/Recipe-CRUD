@@ -6,7 +6,7 @@
 - As a registered user, I want to be able to log in so that I can access my saved recipes and manage them.
 ### Recipe Creation
 - As a logged-in user, I want to be able to create a new recipe by providing a title, ingredients, and instructions so that I can save and share my favorite recipes.
-- As a logged-in user, I want to be able to upload an image for my recipe so that it looks more appealing.
+- As a logged-in user, I want to be able to upload an image for my recipe so that it looks more appealing (might be strech).
 ### Recipe Viewing (Reading)
 - As a logged-in user, I want to see a list of all my saved recipes so that I can easily access and manage them.
 - As a user, I want to view details of a specific recipe including title, ingredients, instructions, and image so that I can follow the recipe.
@@ -29,11 +29,17 @@
 ## Wireframes
 ### Home Page
 Home Page has a sign in and sign up button with clickable pictures to see the recipes. A user can favorite them and they will be added into their homepage.
+
 ![homepage](homepage-wireframe.png)
+
 ### Login Page
+
 ![login](login-wireframe.png)
+
 ### Personel User Page
+
 User can see save recipes, create their own, and delete/edit recipes.
+
 ![User](user-wireframe.png)
 
 ## Route Tree & Table
@@ -41,7 +47,6 @@ User can see save recipes, create their own, and delete/edit recipes.
 
 | **Method**  | **Path**           | **Description**                                                        | **Authentication Required** |
 |-------------|---------------------|------------------------------------------------------------------------|------------------------------|
-| `GET`       | `/home`             | Display a list of all recipes (fetched from the external API)          | No                           |
 | `GET`       | `/recipes`          | List all recipes (fetched from an external API or a local database)    | No                           |
 | `POST`      | `/recipes`          | Create a new recipe (saves to local database)                           | Yes                          |
 | `GET`       | `/recipes/new`      | Show a form to create a new recipe                                     | Yes                          |
@@ -54,12 +59,10 @@ User can see save recipes, create their own, and delete/edit recipes.
 | `GET`       | `/login`            | Show login form                                                          | No                           |
 | `POST`      | `/login`            | Handle user login                                                        | No                           |
 | `POST`      | `/logout`           | Handle user logout                                                       | Yes                          |
-| `GET`       | `/api/recipes`      | Fetch a list of recipes from the external API (for admin/data purposes) | No                           |
-| `GET`       | `/api/recipes/:id`  | Fetch details of a specific recipe from the external API                 | No                           |
 
 ## ERD
 
-![erd](recipe-erd.png)
+![erd](erd-crud-recipe.png)
 
 ## Project Timeline
 
@@ -131,6 +134,7 @@ User can see save recipes, create their own, and delete/edit recipes.
   - CSS
   - Node.js
   - EJS
+  - Express
   - MongoDB
   - Mongoose
   - API 
