@@ -1,0 +1,15 @@
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= recipe.name %>
+    <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= recipe.name %>" />
+
+        <label for="isReadyToCook">Ready to Cook?</label>
+        <input type="checkbox" name="isReadyToCook" <% if (recipe.isReadyToCook) { %>checked<% } %> >
+
+
+        <button type="submit">Update Recipe</button>
+    </form>
+
+</body>
