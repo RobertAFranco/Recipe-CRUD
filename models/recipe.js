@@ -2,7 +2,7 @@
 
 import mongoose from "mongoose";
 
-const fruitSchema = new mongoose.Schema({
+const recipeSchema = new mongoose.Schema({
     name: String,
     isReadyToCook: Boolean,
   });

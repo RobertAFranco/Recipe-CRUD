@@ -5,6 +5,8 @@ import methodOverride from 'method-override';
 import morgan from 'morgan';
 import Recipe from "./models/recipe.js"
 
+import path from 'path';
+import { fileURLToPath } from 'url';
 import authController from './controllers/auth.js';
 
 import * as recipesCtrl from "./controllers/recipes.js"
@@ -12,8 +14,12 @@ import * as recipesCtrl from "./controllers/recipes.js"
 dotenv.config();
 const app = express();
 
-// Set the port from environment variable or default to 3000
-const port = process.env.PORT || "2000";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+const port = process.env.PORT || "1111";
 
 mongoose.connect(process.env.MONGODB_URI);
 

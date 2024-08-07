@@ -45,7 +45,7 @@ authRouter.post('/sign-in', async (req, res) => {
       res.send('User either does not exist, or you have provided the wrong credentials')
     }
 
-    // Compare provided raw password, with the hashed password in the DB
+  
     const validPassword = bcrypt.compareSync(req.body.password, user.password)
 
     if (!validPassword) {
