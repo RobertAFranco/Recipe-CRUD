@@ -11,6 +11,12 @@
         <% recipes.forEach(recipe => { %>
             <li><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></li>
             <% }); %>
+            <% incredients.forEach(incredient => { %>
+              <li><a href="/recipes/<%= incredient._id %>"><%= incredient.name %></a></li>
+              <% }); %>
+              <% instructions.forEach(instruction => { %>
+                <li><a href="/recipes/<%= instruction._id %>"><%= instruction.name %></a></li>
+                <% }); %>
       </ul>
       <a href="/">Back to Home</a>
   </body>

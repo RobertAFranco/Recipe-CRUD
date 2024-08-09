@@ -95,6 +95,10 @@ app.put("/recipes/:recipeId", async (req, res) => {
     
     
     await Recipe.findByIdAndUpdate(req.params.recipeId, req.body);
+
+    await Incredient.findByIdAndUpdate(req.params.incredientId, req.body);
+
+    await Instruction.findByIdAndUpdate(req.params.instructionId, req.body);
   
     
     res.redirect(`/recipes/${req.params.recipeId}`);
