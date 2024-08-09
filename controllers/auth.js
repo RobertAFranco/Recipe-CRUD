@@ -6,22 +6,27 @@ import User from '../models/user.js'
 const authRouter = express.Router()
 
 authRouter.get('/sign-up', async (req, res) => {
-  res.render('auth/sign-up.ejs')
+  res.render('auth/sign-up.ejs', {
+    user: req.session.user
+  })
 })
 
 authRouter.get('/sign-in', async (req, res) => {
-  res.render('auth/sign-in.ejs')
+  res.render('auth/sign-in.ejs', {
+    user: req.session.user
+  })
 })
 
+
 authRouter.post('/sign-up', async (req, res) => {
-  
+
   const user = await User.findOne({ username: req.body.username })
 
   if (user) {
     res.send('User already exists')
   }
 
-  
+
   if (req.body.password !== req.body.confirmPassword) {
     res.send('Password does not match Confirm Password')
   }
@@ -45,14 +50,18 @@ authRouter.post('/sign-in', async (req, res) => {
       res.send('User either does not exist, or you have provided the wrong credentials')
     }
 
-  
+
     const validPassword = bcrypt.compareSync(req.body.password, user.password)
 
     if (!validPassword) {
       res.send('Error, the password was wrong!')
     }
 
-    
+    req.session.user = {
+      username: user.username
+    }
+
+    res.redirect('/')
   } catch (error) {
     console.error('Was not able to sign in', error)
   }

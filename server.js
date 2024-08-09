@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import methodOverride from 'method-override';
 import morgan from 'morgan';
+import session from 'express-session';
 import Recipe from "./models/recipe.js"
 
 import path from 'path';
@@ -34,9 +35,17 @@ app.use(methodOverride("_method"));
 
 app.use(morgan('dev'));
 
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+}));
+
 // Routes
 app.get('/', async (req, res) => {
-  res.render('index.ejs')
+  res.render('index.ejs', {
+    user: req.session.user
+  })
 })
 
 app.get("/recipes/new", recipesCtrl.newRecipes);
