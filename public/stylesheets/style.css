@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700');
+
 body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -7,6 +8,7 @@ body {
     width: 100vw;
     background-color: #f9f7f0;
 }
+
 .landing-header {
     display: flex;
     flex-direction: row;
@@ -51,7 +53,7 @@ body {
 }
 
 .auth-links > a {
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
     padding: 10px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -64,7 +66,7 @@ body {
 
 .auth-links > a:first-child:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
 }
 
 .auth-links > a:nth-child(2) {
@@ -73,7 +75,7 @@ body {
 
 .auth-links > a:nth-child(2):hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
 }
 
 .nav-links > a {
@@ -87,6 +89,7 @@ body {
     color: #6f8dae;
     text-decoration: underline;
 }
+
 .signup-page,
 .signin-page {
     display: flex;
@@ -125,7 +128,7 @@ body {
 }
 
 label {
-    font-size: 0.9em;
+    font-size: 1em; /* Increased for better readability */
 }
 
 input,
@@ -133,17 +136,18 @@ textarea {
     border: 1px solid rgb(190, 190, 190);
     border-radius: 10px;
     margin: 10px 0;
-    width: 15em; /* Adjust as needed */
-    padding: 5px;
+    width: 25em; /* Adjusted width */
+    padding: 10px; /* Adjusted padding */
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 button {
     border: none;
     border-radius: 8px;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
     font-weight: bold;
     background-color: #274c9c;
-    padding: 7px 15px;
+    padding: 10px 20px; /* Adjusted padding */
     margin: 10px 0;
 }
 
@@ -183,11 +187,11 @@ button:hover {
 
 .index-header > h1 {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.7em; /* Adjusted font size */
 }
 
 .index-header > a {
-    padding: 6px 12px;
+    padding: 10px 15px; /* Adjusted padding */
     border: 1px solid gray;
     text-decoration: none;
     color: black;
@@ -195,7 +199,7 @@ button:hover {
 
 .index-header > a:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
 }
 
 .card-container {
@@ -214,16 +218,17 @@ button:hover {
     text-decoration: none;
     margin: 5px 30px 50px;
     color: black;
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .card-container > a:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
 }
 
 a > h4 {
     font-weight: normal;
-    font-size: 1em;
+    font-size: 1.2em; /* Adjusted font size */
 }
 
 .new-container {
@@ -238,13 +243,13 @@ a > h4 {
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
-    padding: 10px 40px;
+    padding: 20px 50px; /* Adjusted padding */
 }
 
 .new-form-container > h1 {
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 1.6em;
+    font-size: 1.8em; /* Adjusted font size */
 }
 
 .new-form-container > form {
@@ -254,7 +259,8 @@ a > h4 {
 
 .new-form-container > form > input,
 .new-form-container > form > textarea {
-    width: 38em;
+    width: 45em; /* Adjusted width */
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .new-form-container > form > button {
@@ -309,36 +315,37 @@ a > h4 {
 
 .show-details-container {
     border: 1px solid gray;
-    padding: 20px 30px;
-    width: 70%;
+    padding: 25px 35px; /* Adjusted padding */
+    width: 80%; /* Adjusted width */
     margin: 10px 0;
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .show-details-container > h3 {
     font-weight: normal;
-    font-size: 1em;
+    font-size: 1.2em; /* Adjusted font size */
 }
 
 .show-details-container > p {
-    font-size: 1em;
+    font-size: 1.2em; /* Adjusted font size */
 }
 
 .owner-container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%; /* Adjusted width */
     justify-content: space-between;
     align-items: center;
 }
 
 .owner-container > a {
-    padding: 6px 32px;
+    padding: 10px 35px; /* Adjusted padding */
     background-color: #6f8dae;
     text-decoration: none;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
     font-weight: bold;
     border-radius: 8px;
-    font-size: 0.8em;
+    font-size: 1em; /* Adjusted font size */
 }
 
 .owner-container > a:hover {
@@ -350,9 +357,10 @@ a > h4 {
     flex-direction: row;
     align-items: center;
     padding: 60px 30px;
-    width: 70%;
+    width: 80%; /* Adjusted width */
     border: 1px solid gray;
     margin: 10px 0;
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .favorites-count {
@@ -364,7 +372,7 @@ a > h4 {
 }
 
 .favorites-count > h2 {
-    font-size: 1.1em;
+    font-size: 1.3em; /* Adjusted font size */
     margin: 0 10px;
 }
 
@@ -376,43 +384,46 @@ a > h4 {
 }
 
 .profile-favorites-container {
-    padding: 10px 30px;
+    padding: 20px 40px; /* Adjusted padding */
     border: 1px solid gray;
-    width: 70%;
+    width: 80%; /* Adjusted width */
     align-self: center;
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .profile-card-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px 70px;
+    padding: 30px 80px; /* Adjusted padding */
 }
 
 .profile-card-container > a {
-    padding: 8px 15px;
-    width: 7em;
-    height: 6em;
+    padding: 12px 20px; /* Adjusted padding */
+    width: 10em; /* Adjusted width */
+    height: 8em; /* Adjusted height */
     border: 1px solid gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 5px 10px 20px;
+    margin: 10px 15px 30px; /* Adjusted margin */
     color: black;
+    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .profile-card-container > a:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Changed from white to beige */
 }
 
 .profile-card-container > a > h4 {
-    font-size: 0.9em;
+    font-size: 1em; /* Adjusted font size */
     text-align: center;
 }
 
 .profile-card-container > a > p {
-    font-size: 0.8em;
+    font-size: 0.9em; /* Adjusted font size */
 }
+
 

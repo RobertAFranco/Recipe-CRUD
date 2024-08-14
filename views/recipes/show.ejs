@@ -20,7 +20,7 @@
                 <h3>Details</h3>
                 <p>Name: <%= recipe.name %></p>
                 <p>Ingredients: <%= recipe.ingredients %></p>
-                <% if (recipe.owner && user && String(recipe.owner._id) === String(user._id)) { %>
+                <% if (recipe.owner._id.toString() === user._id.toString()) { %> <!-- Updated this line -->
                     <div class="owner-container">
                         <p>Owned by you</p>
                         <a href="/recipes/<%= recipe._id %>/edit">Edit</a>
@@ -29,7 +29,7 @@
                         </form>
                     </div>
                 <% } else { %>
-                    <p>Owned by <%= recipe.owner ? recipe.owner.username : "Unknown" %></p>
+                    <p>Owned by <%= recipe.owner.username %></p>
                 <% } %>
             </div>
             <div class="favorites-container">
@@ -53,3 +53,4 @@
 </body>
 
 </html>
+

@@ -17,7 +17,7 @@
     <div class="card-container">
       <% recipes.forEach((recipe)=> { %>
         <a href="/recipes/<%= recipe._id %>">
-          <h4><%= recipe.ingredients %> Recipe</h4>
+          <h4><%= recipe.name %> Recipe</h4>
           <p>Owned by <%= recipe.owner.username %></p>
         </a>
       <% }) %>

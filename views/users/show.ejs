@@ -35,7 +35,7 @@
                 <%= myFavoriteRecipes.length === 1 ? 'Favorite' : 'Favorites' %>
             </p>
             <div class="profile-card-container">
-                <% myFavoriteRecipe.forEach((recipe) => { %>
+                <% myFavoriteRecipes.forEach((recipe) => { %>
                     <a href="/recipes/<%= recipe._id %>">
                         <h4><%= recipe.ingredients %> Recipe</h4>
                         <p>Owned by <%= recipe.owner.username %></p>
