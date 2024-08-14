@@ -1,13 +1,30 @@
 <nav>
-    <a href="/">Home</a>
-    <% if(user) { %>
-      <a href="/users/<%=user._id%>/recipes">View my Recipes</a>
+  <% if(user) { %>
+  <div class="landing-header">
+    <div class="logo-container">
+      <div class="recipe-icon"></div> 
+      <h1>RecipeHaven</h1>
+    </div>
+    <div class="nav-links">
+      <a href="/users/profile">Profile</a>
+      <a href="/listings">View all Listings</a>
       <a href="/auth/sign-out">Sign Out</a>
-    <% } else { %>
-      <a href="/auth/sign-in">Sign In</a>
+    </div>
+  </div>
+
+  <% } else { %>
+  <div class="landing-header">
+    <div class="logo-container">
+      <div class="recipe-icon"></div>
+      <h1>RecipeHaven</h1>
+    </div>
+    <div class="auth-links">
       <a href="/auth/sign-up">Sign Up</a>
-    <% } %>
-  </nav>
+      <a href="/auth/sign-in">Sign In</a>
+    </div>
+  </div>
+  <% } %>
+</nav>
 
  
   
