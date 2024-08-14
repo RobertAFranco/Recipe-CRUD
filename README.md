@@ -6,9 +6,10 @@
 
 # It's a MEN full-stack crud with referenced data app that allows users to share and favorite/unfavorite each other's recipes after creating an account. Users can also delete/edit/update their own posted recipes.
 
-# Attributions: I used the docs and open-house level-up with chat-GPT for debugging.
+# Attributions: 
+- I used the docs and open-house level-up with chat-GPT for debugging.
 
-# Technologies used:
+# Tech used:
 - JavaScript
 - CSS
 - Node.js
@@ -18,5 +19,7 @@
 - Mongoose
 
 
-# Next steps: Incorporate an API, users could be able to submit pictures and videos with their recipe, and rotating recipes of the week on the front page
+# Next steps: 
+- Incorporate an API, users could be able to submit pictures and videos with their recipe, and rotating recipes of the week on the front page
 
+![image](https://github.com/user-attachments/assets/73e3740e-20be-4ec0-ab5e-d45d74ff4a35)
