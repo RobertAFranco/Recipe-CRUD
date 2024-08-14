@@ -4,31 +4,64 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>
         <%= recipe.name %>
-
-    </title> 
+    </title>
 </head>
 
 <body>
-    <h1>
-        <%= recipe.name %>
-        <%= incredients.name %>
-        <%= instructions.name %>
-    </h1>
-  
-    <% if (recipe.isReadyToCook) { %>
-        <p>This recipe is ready to use!</p>
-        <% } else { %>
-            <p>This recipe is not ready to use!</p>
-            <% } %>
-                <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
-                    <button type="submit">Delete <%= recipe.name %></button>
-                </form>
-                <a href="/recipes/<%= recipe._id %>/edit">Edit <%= recipe.name %></a>
-                <a href="/recipes">Back to Recipes</a>
-                
+    <%- include('../partials/_navbar.ejs') %>
+        <div class="show-page-container">
+            <div class="show-img"></div>
+            <div class="show-info-container">
+                <div class="show-header">
+                    <h1>
+                        <%= recipe.name %> Recipe
+                    </h1>
+
+                </div>
+                <div class="show-details-container">
+                    <h3>Details</h3>
+                    <p>Name: <%= recipe.name %>
+                    </p>
+                    <p>Ingredients: <%= recipe.incredients %>
+                    </p>
+                    <% if (recipe.owner._id.equals(user._id)) { %>
+                        <div class="owner-container">
+                            <p>Owned by you</p>
+                            <a href="/recipes/<%= recipe._id %>/edit">Edit</a>
+                            <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+                                <button type="submit">Delete Recipe</button>
+                            </form>
+                        </div>
+                        <% } else { %>
+                            <p>Owned by <%= recipe.owner.username %>
+                            </p>
+                            <% } %>
+                </div>
+                <div class="favorites-container">
+                    <div class="favorites-count">
+                        <h2>
+                            <%= recipe.favoritedByUsers.length %> Favorites
+                        </h2>
+                    </div>
+                    <div class="favorite-button-container">
+                        <% if (userHasFavorited) { %>
+                            <form action="/recipes/<%= recipe._id %>/favorited-by/<%= user._id %>?_method=DELETE"
+                                method="POST">
+
+                                <button type="submit">Unfavorite</button>
+                            </form>
+                            <% } else { %>
+                                <form action="/recipes/<%= recipe._id %>/favorited-by/<%= user._id %>" method="POST">
+
+                                    <button type="submit">Favorite</button>
+                                </form>
+                                <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
-
-
 </html>
