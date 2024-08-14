@@ -23,6 +23,7 @@ router.get('/profile', async (req, res) => {
     res.render('users/show.ejs', {
       myRecipes,
       myFavoriteRecipes,
+
      
     });
   } catch (error) {

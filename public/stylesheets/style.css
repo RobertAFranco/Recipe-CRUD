@@ -38,7 +38,7 @@ body {
 }
 
 .landing-image {
-    background-image: url('');
+    background-image: url('https://www.eatingwell.com/thmb/YxkWBfh2AvNYrDKoHukRdmRvD5U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -152,7 +152,7 @@ button:hover {
 }
 
 .signup-img {
-    background-image: url('');
+    background-image: url('https://plus.unsplash.com/premium_vector-1707985290003-090ea9ea6675?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGZvb2QlMjByZWNpcGVzfGVufDB8fDB8fHww');
     min-height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@ button:hover {
 }
 
 .signin-img {
-    background-image: url('');
+    background-image: url('https://plus.unsplash.com/premium_vector-1682303731641-9e7c8a40c041?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGZvb2QlMjByZWNpcGVzfGVufDB8fDB8fHww');
     min-height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -272,7 +272,7 @@ a > h4 {
 }
 
 .show-img {
-    background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d');
+    background-image: url('https://plus.unsplash.com/premium_vector-1682305893019-a2326c6c6e4c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZvb2QlMjByZWNpcGVzfGVufDB8fDB8fHww');
     background-size: cover;
     background-repeat: no-repeat;
     height: 80%;

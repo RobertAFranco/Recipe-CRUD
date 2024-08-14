@@ -10,12 +10,12 @@ const recipeSchema = new mongoose.Schema({
     required: true,
   },
   instructions: {
-    type: Number,
+    type: String,
     required: true,
     min: 0,
   },
   tips: {
-    type: Number,
+    type: String,
     required: true,
   },
   owner: {
