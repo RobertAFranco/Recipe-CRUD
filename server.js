@@ -1,114 +1,73 @@
-import dotenv from 'dotenv'
-import express from 'express';
-import mongoose from 'mongoose';
-import methodOverride from 'method-override';
-import morgan from 'morgan';
-import session from 'express-session';
-import Recipe from "./models/recipe.js"
-
-import path from 'path';
-import { fileURLToPath } from 'url';
-import authController from './controllers/auth.js';
-
-import * as recipesCtrl from "./controllers/recipes.js"
-
+const dotenv = require('dotenv');
 dotenv.config();
+const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+const methodOverride = require('method-override');
+const morgan = require('morgan'); // Uncomment if you want logging
+const session = require('express-session');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const isSignedIn = require('./middleware/is-signed-in.js');
+const passUserToView = require('./middleware/pass-user-to-view.js');
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-const port = process.env.PORT || "1111";
+const authController = require('./controllers/auth.js');
+const recipesController = require('./controllers/recipess.js');
+const usersController = require('./controllers/users.js');
 
-mongoose.connect(process.env.MONGODB_URI);
+const port = process.env.PORT || '1234';
 
-mongoose.connection.on("connected", () => {
+const path = require('path');
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connection.on('connected', () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
-// Middleware to parse URL-encoded data from forms
+// Middleware setup
 app.use(express.urlencoded({ extended: false }));
-
-app.use(methodOverride("_method"));
-
-app.use(morgan('dev'));
-
+app.use(methodOverride('_method'));
+app.use(morgan('dev')); // Uncomment if you want logging
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
 }));
 
+// Middleware for user data
+app.use(passUserToView);
+
 // Routes
-app.get('/', async (req, res) => {
-  res.render('index.ejs', {
-    user: req.session.user
-  })
-})
+app.get('/', (req, res) => {
+  res.render('index.ejs');
+});
 
-app.get("/recipes/new", recipesCtrl.newRecipes);
+// app.get('/vip-lounge', (req, res) => {
+//   if (req.session.user) {
+//     res.send(`Welcome to the party ${req.session.user.username}.`);
+//   } else {
+//     res.send('Sorry, no guests allowed.');
+//   }
+// });
 
+// Use the EJS view engine
+app.set('view engine', 'ejs');
 
-// GET 
-app.get("/recipes", recipesCtrl.index);
-    
-  
-// POST 
-app.post("/recipes", async (req, res) => {
-    if (req.body.isReadyToCook === "on") {
-      req.body.isReadyToCook= true;
-    } else {
-      req.body.isReadyToCook = false;
-    }
-    await Recipe.create(req.body);
-    res.redirect("/recipes");
-  });
-  
-  app.get("/recipes/:recipeId", async (req, res) => {
-    const foundRecipe = await Recipe.findById(req.params.recipeId);
-    res.render("recipes/show.ejs", {recipe: foundRecipe});
-  });
+// Route handlers
+app.use('/auth', authController);
+app.use('/recipes', isSignedIn, recipesController); 
+app.use('/middleware', isSignedIn);
+app.use('/users', isSignedIn, usersController);
 
-  app.delete("/recipes/:recipeId", async (req, res) => {
-    await Recipe.findByIdAndDelete(req.params.recipeId);
-    res.redirect("/recipes");
-  });
+// Global error handling (optional, but recommended)
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
-  app.get("/recipes/:recipeId/edit", async (req, res) => {
-    const foundRecipe = await Recipe.findById(req.params.recipeId);
-    res.render("recipes/edit.ejs", {
-      recipe: foundRecipe,
-    });
-  });
-
-  // server.js
-
-app.put("/recipes/:recipeId", async (req, res) => {
-  
-    if (req.body.isReadyToCook === "on") {
-      req.body.isReadyToCook = true;
-    } else {
-      req.body.isReadyToCook = false;
-    }
-    
-    
-    await Recipe.findByIdAndUpdate(req.params.recipeId, req.body);
-
-    await Incredient.findByIdAndUpdate(req.params.incredientId, req.body);
-
-    await Instruction.findByIdAndUpdate(req.params.instructionId, req.body);
-  
-    
-    res.redirect(`/recipes/${req.params.recipeId}`);
-  });
-  
-
-
-
-app.use('/auth', authController)
-
+// Start the server
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
