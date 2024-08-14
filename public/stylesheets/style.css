@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: #f9f7f0;
+    background-color: #f5f5dc; /* Beige */
 }
 
 .landing-header {
@@ -53,7 +53,7 @@ body {
 }
 
 .auth-links > a {
-    color: white;
+    color: #f5f5dc; /* Beige */
     padding: 10px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -66,7 +66,7 @@ body {
 
 .auth-links > a:first-child:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Beige */
 }
 
 .auth-links > a:nth-child(2) {
@@ -75,7 +75,7 @@ body {
 
 .auth-links > a:nth-child(2):hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Beige */
 }
 
 .nav-links > a {
@@ -143,7 +143,7 @@ textarea {
 button {
     border: none;
     border-radius: 8px;
-    color: white;
+    color: #f5f5dc; /* Beige */
     font-weight: bold;
     background-color: #274c9c;
     padding: 7px 15px;
@@ -198,7 +198,7 @@ button:hover {
 
 .index-header > a:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Beige */
 }
 
 .card-container {
@@ -225,7 +225,7 @@ button:hover {
 
 .card-container > a:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Beige */
 }
 
 a > h4 {
@@ -342,7 +342,7 @@ a > h4 {
     padding: 6px 32px;
     background-color: #6f8dae;
     text-decoration: none;
-    color: white;
+    color: #f5f5dc; /* Beige */
     font-weight: bold;
     border-radius: 8px;
     font-size: 0.8em;
@@ -413,7 +413,7 @@ a > h4 {
 
 .profile-card-container > a:hover {
     background-color: black;
-    color: white;
+    color: #f5f5dc; /* Beige */
 }
 
 .profile-card-container > a > h4 {
@@ -424,5 +424,3 @@ a > h4 {
 .profile-card-container > a > p {
     font-size: 0.9em; /* Adjusted font size */
 }
-
-
