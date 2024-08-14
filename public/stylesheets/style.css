@@ -6,28 +6,28 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #f9f7f0;
-  }
-  .landing-header {
+}
+.landing-header {
     display: flex;
     flex-direction: row;
     height: 15%;
     width: 100%;
     justify-content: space-between;
-  }
-  
-  .logo-container {
+}
+
+.logo-container {
     display: flex;
     flex-direction: row;
     width: 50%;
     margin: 20px 35px;
-  }
-  
-  .logo-container > h1 {
+}
+
+.logo-container > h1 {
     margin: 0;
     font-size: 1.4em;
-  }
-  
-  .house-icon {
+}
+
+.recipe-icon {
     background-image: url('https://cdn-icons-png.flaticon.com/128/11382/11382524.png');
     width: 1.4em;
     height: 1.4em;
@@ -35,130 +35,122 @@ body {
     background-size: contain;
     margin: 2px;
     padding-left: 5px;
-  }
-  
-  .landing-image {
+}
+
+.landing-image {
     background-image: url('https://images.unsplash.com/photo-1448630360428-65456885c650');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 0 0 -8px;
-  }
-  
-  .auth-links,
-  .nav-links {
+}
+
+.auth-links,
+.nav-links {
     margin: 25px 20px;
-  }
-  
-  .auth-links > a {
+}
+
+.auth-links > a {
     color: white;
     padding: 10px 25px;
     border-radius: 10px;
     text-decoration: none;
     margin: 0 10px;
-  }
-  
-  .auth-links > a:first-child {
+}
+
+.auth-links > a:first-child {
     background-color: #274c9c;
-  }
-  
-  .auth-links > a:first-child:hover {
+}
+
+.auth-links > a:first-child:hover {
     background-color: black;
     color: white;
-  }
-  
-  .auth-links > a:nth-child(2) {
+}
+
+.auth-links > a:nth-child(2) {
     background-color: #6f8dae;
-  }
-  
-  .auth-links > a:nth-child(2):hover {
+}
+
+.auth-links > a:nth-child(2):hover {
     background-color: black;
     color: white;
-  }
-  
-  .nav-links > a {
+}
+
+.nav-links > a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
     color: black;
-  }
-  
-  .nav-links > a:hover {
+}
+
+.nav-links > a:hover {
     color: #6f8dae;
     text-decoration: underline;
-  }
-  .signup-page,
+}
+.signup-page,
 .signin-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
 }
 
 .signup-form-container-1,
 .signin-form-container-1 {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .signup-form-container-2,
 .signin-form-container-2 {
-  padding: 10px 30px 20px;
-  border: 1px solid gray;
+    padding: 10px 30px 20px;
+    border: 1px solid gray;
 }
 
 .signup-form-container-2 > h1,
 .signin-form-container-2 > h1 {
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1.5em;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 
 .signup-form-container-2 > form,
 .signin-form-container-2 > form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 
-input {
-  border: 1px solid rgb(190, 190, 190);
-  border-radius: 10px;
-  margin: 10px 0;
-  width: 15em;
-  padding: 5px;
+input,
+textarea {
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 15em; /* Adjust as needed */
+    padding: 5px;
 }
 
 button {
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  background-color: #274c9c;
-  padding: 7px 15px;
-  margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    background-color: #274c9c;
+    padding: 7px 15px;
+    margin: 10px 0;
 }
 
 button:hover {
-  background-color: black;
+    background-color: black;
 }
 
-.signup-img {
-  background-image: url('https://images.unsplash.com/photo-1600607687486-6cced9976e79');
-  min-height: 110vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 40%;
-  position: relative;
-  z-index: -10;
-}
 .signup-img {
     background-image: url('https://images.unsplash.com/photo-1600607687486-6cced9976e79');
     min-height: 110vh;
@@ -167,9 +159,9 @@ button:hover {
     width: 40%;
     position: relative;
     z-index: -10;
-  }
-  
-  .signin-img {
+}
+
+.signin-img {
     background-image: url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8');
     min-height: 110vh;
     background-size: cover;
@@ -178,40 +170,41 @@ button:hover {
     position: relative;
     z-index: -10;
     left: -10px;
-  }
-  .index-header {
+}
+
+.index-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
     width: 90%;
-  }
-  
-  .index-header > h1 {
+}
+
+.index-header > h1 {
     text-transform: uppercase;
     font-size: 1.5em;
-  }
-  
-  .index-header > a {
+}
+
+.index-header > a {
     padding: 6px 12px;
     border: 1px solid gray;
     text-decoration: none;
     color: black;
-  }
-  
-  .index-header > a:hover {
+}
+
+.index-header > a:hover {
     background-color: black;
     color: white;
-  }
-  
-  .card-container {
+}
+
+.card-container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 70px;
-  }
-  
-  .card-container > a {
+}
+
+.card-container > a {
     padding: 12px 25px;
     border: 1px solid gray;
     display: flex;
@@ -221,51 +214,54 @@ button:hover {
     text-decoration: none;
     margin: 5px 30px 50px;
     color: black;
-  }
-  
-  .card-container > a:hover {
+}
+
+.card-container > a:hover {
     background-color: black;
     color: white;
-  }
-  
-  a > h4 {
+}
+
+a > h4 {
     font-weight: normal;
     font-size: 1em;
-  }
-  .new-container {
+}
+
+.new-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80%;
-  }
-  
-  .new-form-container {
+}
+
+.new-form-container {
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
     padding: 10px 40px;
-  }
-  
-  .new-form-container > h1 {
+}
+
+.new-form-container > h1 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1.6em;
-  }
-  
-  .new-form-container > form {
+}
+
+.new-form-container > form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .new-form-container > form > input {
+}
+
+.new-form-container > form > input,
+.new-form-container > form > textarea {
     width: 38em;
-  }
-  
-  .new-form-container > form > button {
+}
+
+.new-form-container > form > button {
     margin-bottom: 20px;
-  }
-  .show-page-container {
+}
+
+.show-page-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -273,69 +269,69 @@ button:hover {
     padding: 20px 50px;
     height: 100%;
     max-width: 100%;
-  }
-  
-  .show-img {
+}
+
+.show-img {
     background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d');
     background-size: cover;
     background-repeat: no-repeat;
     height: 80%;
     width: 40%;
-  }
-  
-  .show-info-container {
+}
+
+.show-info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70%;
     height: 80%;
-  }
-  
-  .show-header {
+}
+
+.show-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 75%;
-  }
-  
-  .show-header > h1 {
+}
+
+.show-header > h1 {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1.8em;
-  }
-  
-  .show-header > h3 {
+}
+
+.show-header > h3 {
     font-weight: normal;
     font-size: 1.6em;
-  }
-  
-  .show-details-container {
+}
+
+.show-details-container {
     border: 1px solid gray;
     padding: 20px 30px;
     width: 70%;
     margin: 10px 0;
-  }
-  
-  .show-details-container > h3 {
+}
+
+.show-details-container > h3 {
     font-weight: normal;
     font-size: 1em;
-  }
-  
-  .show-details-container > p {
+}
+
+.show-details-container > p {
     font-size: 1em;
-  }
-  
-  .owner-container {
+}
+
+.owner-container {
     display: flex;
     flex-direction: row;
     width: 80%;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .owner-container > a {
+}
+
+.owner-container > a {
     padding: 6px 32px;
     background-color: #6f8dae;
     text-decoration: none;
@@ -343,13 +339,13 @@ button:hover {
     font-weight: bold;
     border-radius: 8px;
     font-size: 0.8em;
-  }
-  
-  .owner-container > a:hover {
+}
+
+.owner-container > a:hover {
     background-color: black;
-  }
-  
-  .favorites-container {
+}
+
+.favorites-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -357,42 +353,42 @@ button:hover {
     width: 70%;
     border: 1px solid gray;
     margin: 10px 0;
-  }
-  
-  .favorites-count {
+}
+
+.favorites-count {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 10px;
-  }
-  
-  .favorites-count > h2 {
+}
+
+.favorites-count > h2 {
     font-size: 1.1em;
     margin: 0 10px;
-  }
-  
-  .profile-container {
+}
+
+.profile-container {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
     width: 90%;
-  }
-  
-  .profile-favorites-container {
+}
+
+.profile-favorites-container {
     padding: 10px 30px;
     border: 1px solid gray;
     width: 70%;
     align-self: center;
-  }
-  
-  .profile-card-container {
+}
+
+.profile-card-container {
     display: flex;
     flex-wrap: wrap;
     padding: 20px 70px;
-  }
-  
-  .profile-card-container > a {
+}
+
+.profile-card-container > a {
     padding: 8px 15px;
     width: 7em;
     height: 6em;
@@ -404,18 +400,19 @@ button:hover {
     text-decoration: none;
     margin: 5px 10px 20px;
     color: black;
-  }
-  
-  .profile-card-container > a:hover {
+}
+
+.profile-card-container > a:hover {
     background-color: black;
     color: white;
-  }
-  
-  .profile-card-container > a > h4 {
+}
+
+.profile-card-container > a > h4 {
     font-size: 0.9em;
     text-align: center;
-  }
-  
-  .profile-card-container > a > p {
+}
+
+.profile-card-container > a > p {
     font-size: 0.8em;
-  }
+}
+
