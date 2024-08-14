@@ -53,7 +53,7 @@ body {
 }
 
 .auth-links > a {
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
     padding: 10px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -66,7 +66,7 @@ body {
 
 .auth-links > a:first-child:hover {
     background-color: black;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
 }
 
 .auth-links > a:nth-child(2) {
@@ -75,7 +75,7 @@ body {
 
 .auth-links > a:nth-child(2):hover {
     background-color: black;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
 }
 
 .nav-links > a {
@@ -128,7 +128,7 @@ body {
 }
 
 label {
-    font-size: 1em; /* Increased for better readability */
+    font-size: 0.9em;
 }
 
 input,
@@ -136,18 +136,17 @@ textarea {
     border: 1px solid rgb(190, 190, 190);
     border-radius: 10px;
     margin: 10px 0;
-    width: 25em; /* Adjusted width */
-    padding: 10px; /* Adjusted padding */
-    background-color: #f5f5dc; /* Changed from white to beige */
+    width: 15em;
+    padding: 5px;
 }
 
 button {
     border: none;
     border-radius: 8px;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
     font-weight: bold;
     background-color: #274c9c;
-    padding: 10px 20px; /* Adjusted padding */
+    padding: 7px 15px;
     margin: 10px 0;
 }
 
@@ -187,11 +186,11 @@ button:hover {
 
 .index-header > h1 {
     text-transform: uppercase;
-    font-size: 1.7em; /* Adjusted font size */
+    font-size: 1.5em;
 }
 
 .index-header > a {
-    padding: 10px 15px; /* Adjusted padding */
+    padding: 6px 12px;
     border: 1px solid gray;
     text-decoration: none;
     color: black;
@@ -199,7 +198,7 @@ button:hover {
 
 .index-header > a:hover {
     background-color: black;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
 }
 
 .card-container {
@@ -218,17 +217,20 @@ button:hover {
     text-decoration: none;
     margin: 5px 30px 50px;
     color: black;
-    background-color: #f5f5dc; /* Changed from white to beige */
+    word-wrap: break-word;
+    text-align: center;
+    width: 12em; /* Increased width */
+    height: auto; /* Let the height adjust based on the content */
 }
 
 .card-container > a:hover {
     background-color: black;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
 }
 
 a > h4 {
     font-weight: normal;
-    font-size: 1.2em; /* Adjusted font size */
+    font-size: 1em;
 }
 
 .new-container {
@@ -243,13 +245,13 @@ a > h4 {
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
-    padding: 20px 50px; /* Adjusted padding */
+    padding: 10px 40px;
 }
 
 .new-form-container > h1 {
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 1.8em; /* Adjusted font size */
+    font-size: 1.6em;
 }
 
 .new-form-container > form {
@@ -259,8 +261,7 @@ a > h4 {
 
 .new-form-container > form > input,
 .new-form-container > form > textarea {
-    width: 45em; /* Adjusted width */
-    background-color: #f5f5dc; /* Changed from white to beige */
+    width: 38em;
 }
 
 .new-form-container > form > button {
@@ -315,37 +316,36 @@ a > h4 {
 
 .show-details-container {
     border: 1px solid gray;
-    padding: 25px 35px; /* Adjusted padding */
-    width: 80%; /* Adjusted width */
+    padding: 20px 30px;
+    width: 70%;
     margin: 10px 0;
-    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .show-details-container > h3 {
     font-weight: normal;
-    font-size: 1.2em; /* Adjusted font size */
+    font-size: 1em;
 }
 
 .show-details-container > p {
-    font-size: 1.2em; /* Adjusted font size */
+    font-size: 1em;
 }
 
 .owner-container {
     display: flex;
     flex-direction: row;
-    width: 90%; /* Adjusted width */
+    width: 80%;
     justify-content: space-between;
     align-items: center;
 }
 
 .owner-container > a {
-    padding: 10px 35px; /* Adjusted padding */
+    padding: 6px 32px;
     background-color: #6f8dae;
     text-decoration: none;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
     font-weight: bold;
     border-radius: 8px;
-    font-size: 1em; /* Adjusted font size */
+    font-size: 0.8em;
 }
 
 .owner-container > a:hover {
@@ -357,10 +357,9 @@ a > h4 {
     flex-direction: row;
     align-items: center;
     padding: 60px 30px;
-    width: 80%; /* Adjusted width */
+    width: 70%;
     border: 1px solid gray;
     margin: 10px 0;
-    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .favorites-count {
@@ -372,7 +371,7 @@ a > h4 {
 }
 
 .favorites-count > h2 {
-    font-size: 1.3em; /* Adjusted font size */
+    font-size: 1.1em;
     margin: 0 10px;
 }
 
@@ -384,37 +383,37 @@ a > h4 {
 }
 
 .profile-favorites-container {
-    padding: 20px 40px; /* Adjusted padding */
+    padding: 10px 30px;
     border: 1px solid gray;
-    width: 80%; /* Adjusted width */
+    width: 70%;
     align-self: center;
-    background-color: #f5f5dc; /* Changed from white to beige */
 }
 
 .profile-card-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px 80px; /* Adjusted padding */
+    padding: 20px 70px;
 }
 
 .profile-card-container > a {
-    padding: 12px 20px; /* Adjusted padding */
-    width: 10em; /* Adjusted width */
-    height: 8em; /* Adjusted height */
+    padding: 16px 20px;
+    width: 12em; /* Increased width */
+    height: auto; /* Let the height adjust based on the content */
     border: 1px solid gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin: 10px 15px 30px; /* Adjusted margin */
+    margin: 5px 10px 20px;
     color: black;
-    background-color: #f5f5dc; /* Changed from white to beige */
+    word-wrap: break-word; /* Ensure long text wraps */
+    text-align: center; /* Center text */
 }
 
 .profile-card-container > a:hover {
     background-color: black;
-    color: #f5f5dc; /* Changed from white to beige */
+    color: white;
 }
 
 .profile-card-container > a > h4 {
