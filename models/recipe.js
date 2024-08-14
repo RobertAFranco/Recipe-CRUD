@@ -32,6 +32,6 @@ const recipeSchema = new mongoose.Schema({
 
 
 // ... recipeSchema located above
-const Recipe = mongoose.model('Recipe', recipeSchemaSchema);
+const Recipe = mongoose.model('Recipe', recipeSchema);
 
 module.exports = Recipe;

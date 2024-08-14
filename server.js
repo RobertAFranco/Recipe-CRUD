@@ -11,10 +11,10 @@ const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
 const authController = require('./controllers/auth.js');
-const recipesController = require('./controllers/recipess.js');
+const recipesController = require('./controllers/recipes.js');
 const usersController = require('./controllers/users.js');
 
-const port = process.env.PORT || '1234';
+const port = process.env.PORT || '9876';
 
 const path = require('path');
 

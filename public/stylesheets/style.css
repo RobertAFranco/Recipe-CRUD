@@ -28,7 +28,7 @@ body {
 }
 
 .recipe-icon {
-    background-image: url('https://cdn-icons-png.flaticon.com/128/11382/11382524.png');
+    background-image: url('https://www.kindpng.com/picc/m/235-2356386_cooking-icon-png-recipe-icon-free-vector-transparent.png');
     width: 1.4em;
     height: 1.4em;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body {
 }
 
 .landing-image {
-    background-image: url('https://images.unsplash.com/photo-1448630360428-65456885c650');
+    background-image: url('');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -152,7 +152,7 @@ button:hover {
 }
 
 .signup-img {
-    background-image: url('https://images.unsplash.com/photo-1600607687486-6cced9976e79');
+    background-image: url('');
     min-height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@ button:hover {
 }
 
 .signin-img {
-    background-image: url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8');
+    background-image: url('');
     min-height: 110vh;
     background-size: cover;
     background-repeat: no-repeat;
