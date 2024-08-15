@@ -9,19 +9,18 @@
 - As a logged-in user, I want to be able to upload an image for my recipe so that it looks more appealing (might be strech).
 ### Recipe Viewing (Reading)
 - As a logged-in user, I want to see a list of all my saved recipes so that I can easily access and manage them.
-- As a user, I want to view details of a specific recipe including title, ingredients, instructions, and image so that I can follow the recipe.
-- As a user, I want to search for recipes by title or ingredient so that I can quickly find specific recipes.
+- As a user, I want to view details of a specific recipe including title, ingredients, instructions, and image so that I can follow the recipe (stretch).
+  
 ### Recipe Updating
 - As a logged-in user, I want to be able to edit the details of a recipe, including the title, ingredients, instructions, and image so that I can update or correct any information.
-- As a logged-in user, I want to be able to update the recipe's image so that the visual representation of my recipe is accurate.
+- As a logged-in user, I want to be able to update the recipe's image so that the visual representation of my recipe is accurate.(stretch)
 ### Recipe Deletion
 - As a logged-in user, I want to be able to delete a recipe so that I can remove recipes that I no longer want to keep.
 ### Authorization and Access Control
-- As a guest user, I want to be able to view a list of recipes but not be able to create, edit, or delete any recipes.
 - As a logged-in user, I want to be able to see and manage only my own recipes and not those of other users.
 ### User Interface and Experience
 - As a user, I want the recipe creation and editing forms to be user-friendly and pre-fill existing information when editing so that I can easily make changes.
-- As a user, I want to have a clear and intuitive navigation menu so that I can easily find different sections of the application like my recipes, search functionality, and account settings (dark/light mode).
+- As a user, I want to have a clear and intuitive navigation menu so that I can easily find different sections of the application like my recipes, search functionality, and account settings (dark/light mode).(stretch)
 ### Feedback and Error Handling
 - As a user, I want to receive confirmation when I successfully create, update, or delete a recipe so that I know my action was completed.
 - As a user, I want to receive error messages if I try to create or update a recipe with missing required fields so that I can correct the errors.
